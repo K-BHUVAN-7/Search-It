@@ -14,4 +14,4 @@ jobs:
 
       # Step 2: Run the Semgrep scan using the official Semgrep Action
       # This uses the community-driven "auto" configuration
-      - uses: semgrep/semgrep-action@v2
+      - uses: semgrep/semgrep-action@v1
