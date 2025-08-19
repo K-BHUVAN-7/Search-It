@@ -7,11 +7,13 @@ on:
 jobs:
   semgrep:
     name: Scan
-    runs-on: ubuntu-latest # Runs on a standard Linux virtual machine
+    runs-on: ubuntu-latest
     steps:
       # Step 1: Check out your repository's code
       - uses: actions/checkout@v4
 
-      # Step 2: Run the Semgrep scan using the official Semgrep Action
-      # This uses the community-driven "auto" configuration
+      # Step 2: Run the Semgrep scan using v1, but with an explicit ruleset
+      # This will now detect issues like eval()
       - uses: semgrep/semgrep-action@v1
+        with:
+          config: "auto"
